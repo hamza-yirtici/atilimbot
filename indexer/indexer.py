@@ -57,4 +57,4 @@ if __name__ == "__main__" :
         print(f"\n{file} added.\n")
         chunks = []
         text = ""
-    print("Data indexed successfully.")
+    print("Indexed successfully.")
