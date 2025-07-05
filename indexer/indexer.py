@@ -41,7 +41,9 @@ if __name__ == "__main__" :
     dotenv_path = os.path.join(os.path.dirname(__file__), "..", ".env")
     load_dotenv(dotenv_path)
     vectorstore = get_vector_store()
-    directory = "C:\\Users\\hamza\\Desktop\\atilimbot\\indexer\\documents"
+    import os
+    base_dir = os.path.dirname(__file__)
+    directory = os.path.join(base_dir, "indexer", "documents")
     files = os.listdir(directory)
     for file in files:
         file_path = os.path.join(directory, file)
@@ -55,4 +57,4 @@ if __name__ == "__main__" :
         print(f"\n{file} added.\n")
         chunks = []
         text = ""
-    print("Successfull.")
+    print("Data indexed successfully.")
